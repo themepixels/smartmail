@@ -1,0 +1,10 @@
+
+.mailbox {
+  position: fixed;
+  top: 0;
+  left: $sidebar-width;
+  width: 375px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid rgba($border-color, .75);
+}

@@ -1,0 +1,14 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap');
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Panels
+@import "panels/sidebar";
+@import "panels/mailbox";

@@ -1,0 +1,138 @@
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid rgba($border-color, .75);
+}
+
+.sidebar-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.sidebar-logo-icon {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 5px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  i {
+    position: relative;
+    opacity: .9;
+  }
+}
+
+.sidebar-logo {
+  font-size: 20px;
+  font-weight: 400;
+  color: $body-color;
+  text-decoration: none;
+  letter-spacing: -1px;
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+  }
+
+  strong { font-weight: 600; }
+}
+
+.sidebar-body {
+  padding: 25px;
+  position: relative;
+
+  .nav-link {
+    height: 42px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray-700;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      right: -15px;
+      bottom: 0;
+      background-color: rgba($color-secondary, .12);
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(all 0.2s);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      visibility: visible;
+      opacity: .6;
+    }
+
+    &.active {
+      color: $color-primary;
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        opacity: 1;
+      }
+    }
+
+    i {
+      font-size: 20px;
+      font-weight: 400;
+      position: relative;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      margin-left: 10px;
+    }
+
+    + .nav-link { margin-top: 1px; }
+
+    small {
+      margin-left: auto;
+      font-weight: 400;
+      font-size: 12px;
+      position: relative;
+      color: $gray-700;
+    }
+  }
+}
+
+.sidebar-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: $gray-600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
