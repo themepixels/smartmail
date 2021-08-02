@@ -1,9 +1,16 @@
 
-$body-bg:                         #f8f9fa;
+$body-bg:                         #ffffff;
+$body-color:                      #666d8c;
 
 // Colors
-$color-primary:                   #4935ff;
-$color-secondary:                 #85afff;
+$color-primary:                   #3a68f2;
+$color-secondary:                 #7695f5;
+
+$color-tx-01:                     #2a2b2f;
+$color-tx-02:                     #666d8c;
+$color-tx-03:                     #a0a7c4;
+
+$color-bg-01:                     #f5f6fa;
 
 // Fonts
 $ff-primary:                      'Lexend', sans-serif;
@@ -12,4 +19,4 @@ $ff-secondary:                    'Alegreya Sans', sans-serif;
 $font-family-base:                $ff-primary;
 
 // Panels
-$sidebar-width:                   240px;
+$sidebar-width:                   250px;

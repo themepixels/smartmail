@@ -36,6 +36,7 @@ function serve () {
   bs.init({
     injectChanges: true,
     server: true,
+    notify: false,
     ui: {
       port: 3005,
     },

@@ -26,7 +26,6 @@
 
     <div class="sidebar">
       <div class="sidebar-header">
-        <a href="" class="sidebar-logo-icon"><i class="bi bi-envelope-fill"></i></a>
         <a href="" class="sidebar-logo">
           <strong>Smart</strong>Mail</a>
       </div><!-- sidebar-header -->
@@ -50,7 +49,15 @@
     </div><!-- sidebar -->
 
     <div class="mailbox">
-
+      <div class="mailbox-header">
+        <div class="mailbox-search">
+          <i class="ri-search-line"></i>
+          <input type="search" class="form-control" placeholder="Search mail">
+        </div><!-- mailbox-search -->
+      </div><!-- mailbox-header -->
+      <div class="mailbox-option">
+        <a href="" class="dropdown-link">Select <i class="ri-arrow-down-s-line"></i></a>
+      </div><!-- mailbox-option -->
     </div><!-- mailbox -->
 
     <script src="lib/jquery/jquery.min.js"></script>
@@ -59,6 +66,14 @@
     <script>
       $(document).ready(function() {
         'use strict'
+
+        $('.sidebar .nav-link').on('click', function(e){
+          e.preventDefault();
+          $(this).addClass('active');
+          $(this).siblings().removeClass('active');
+
+          $(this).closest('.nav').siblings('.nav').find('.nav-link').removeClass('active');
+        });
       });
     </script>
   </body>
