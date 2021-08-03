@@ -55,9 +55,30 @@
           <input type="search" class="form-control" placeholder="Search mail">
         </div><!-- mailbox-search -->
       </div><!-- mailbox-header -->
+
       <div class="mailbox-option">
-        <a href="" class="dropdown-link">Select <i class="ri-arrow-down-s-line"></i></a>
+        <a href="" class="dropdown-check">
+          <i class="ri-checkbox-blank-line"></i>
+          <i class="ri-checkbox-fill"></i>
+          <i class="ri-checkbox-indeterminate-fill"></i>
+        </a>
+        <a href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>
+
+        <div class="ms-auto d-flex align-items-center">
+          <span>1-20 of 1,060</span>
+          <a href="" class="pager prev"><i class="ri-arrow-left-s-line"></i></a>
+          <a href="" class="pager next"><i class="ri-arrow-right-s-line"></i></a>
+        </div>
       </div><!-- mailbox-option -->
+      <ul class="mail-group">
+        <li class="mail-item">
+          ...
+        </li>
+        <li class="mail-item">
+          ...
+        </li>
+      </ul><!-- mail-group -->
+
     </div><!-- mailbox -->
 
     <script src="lib/jquery/jquery.min.js"></script>
@@ -73,6 +94,19 @@
           $(this).siblings().removeClass('active');
 
           $(this).closest('.nav').siblings('.nav').find('.nav-link').removeClass('active');
+        });
+
+        $('.mailbox-search .form-control').on('focusin focusout', function(e){
+          if(e.type === 'focusin') {
+            $(this).parent().addClass('onfocus');
+          } else {
+            $(this).parent().removeClass('onfocus');
+          }
+        });
+
+        $('.dropdown-check').on('click', function(e){
+          e.preventDefault();
+          $(this).toggleClass('checkall');
         });
       });
     </script>

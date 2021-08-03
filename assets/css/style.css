@@ -7603,10 +7603,9 @@ textarea.form-control-lg {
   background-color: #fff; }
 
 .mailbox-header {
-  height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 20px; }
+  padding: 20px 20px 10px; }
 
 .mailbox-search {
   width: 100%;
@@ -7631,21 +7630,91 @@ textarea.form-control-lg {
     .mailbox-search .form-control::placeholder {
       color: #a0a7c4;
       text-shadow: none; }
+  .mailbox-search.onfocus {
+    background-color: #fff;
+    box-shadow: 0 0 0 1.5px #7695f5; }
 
 .mailbox-option {
-  padding: 0 20px;
+  padding: 0 20px 5px;
   display: flex;
-  align-items: center; }
-  .mailbox-option .dropdown-link {
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    position: relative;
-    text-decoration: none;
-    background-color: rgba(58, 104, 242, 0.1);
-    color: #7695f5;
-    height: 28px;
+  align-items: center;
+  font-size: 13px; }
+  .mailbox-option .dropdown-check {
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    border-radius: 5px; }
+    justify-content: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #666d8c;
+    text-decoration: none; }
+    .mailbox-option .dropdown-check:hover, .mailbox-option .dropdown-check:focus {
+      background-color: #e9ecf3; }
+    .mailbox-option .dropdown-check i {
+      font-size: 20px;
+      line-height: 1;
+      border-radius: 2px; }
+      .mailbox-option .dropdown-check i:not(:first-child) {
+        display: none; }
+    .mailbox-option .dropdown-check.checkall i {
+      color: #3a68f2; }
+      .mailbox-option .dropdown-check.checkall i:first-child {
+        display: none; }
+      .mailbox-option .dropdown-check.checkall i:nth-child(2) {
+        display: block; }
+      .mailbox-option .dropdown-check.checkall i:last-child {
+        display: none; }
+    .mailbox-option .dropdown-check.check i {
+      color: #3a68f2; }
+      .mailbox-option .dropdown-check.check i:first-child, .mailbox-option .dropdown-check.check i:nth-child(2) {
+        display: none; }
+      .mailbox-option .dropdown-check.check i:last-child {
+        display: block; }
+  .mailbox-option .dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 30px;
+    text-decoration: none;
+    color: #666d8c;
+    font-size: 18px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+    .mailbox-option .dropdown-link:hover, .mailbox-option .dropdown-link:focus {
+      background-color: #e9ecf3; }
+  .mailbox-option span {
+    margin-right: 10px;
+    color: #a0a7c4;
+    letter-spacing: .2px; }
+  .mailbox-option .pager {
+    position: relative;
+    width: 26px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    color: #666d8c;
+    text-decoration: none; }
+    .mailbox-option .pager:hover, .mailbox-option .pager:focus {
+      background-color: #e9ecf3; }
+    .mailbox-option .pager i {
+      font-size: 20px;
+      line-height: 1; }
+    .mailbox-option .pager + .pager {
+      margin-left: 1px; }
+
+.mail-group {
+  padding: 5px 20px 0;
+  margin: 0;
+  list-style: none; }
+
+.mail-item {
+  background-color: #f5f6fa;
+  height: 100px;
+  border-radius: 4px;
+  padding: 10px; }
+  .mail-item + .mail-item {
+    margin-top: 3px; }
