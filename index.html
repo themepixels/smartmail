@@ -70,23 +70,125 @@
           <a href="" class="pager next"><i class="ri-arrow-right-s-line"></i></a>
         </div>
       </div><!-- mailbox-option -->
-      <ul class="mail-group">
-        <li class="mail-item">
-          ...
+      <ul id="mailGroup" class="mail-group">
+        <li class="mail-item active">
+          <div class="mail-avatar"><img src="../assets/img/img1.jpg" alt=""></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Mary Johnson</span>
+              <span class="mail-time">12:23 PM</span>
+            </div>
+            <h6 class="mail-subject">Reactivate and Reconnect</h6>
+            <p class="mail-text">Excepteur sint occa cupidatat non proident, sunt in culpa qui officia...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item unread">
+          <div class="mail-avatar"><span class="green">p</span></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Patricia Anderson</span>
+              <span class="mail-time">Yesterday</span>
+            </div>
+            <h6 class="mail-subject">Score Midnight Flash Deals</h6>
+            <p class="mail-text">Nemo enim ipsam voluptatem quia voluptas sit asper natur...</p>
+          </div><!-- mail-item-body -->
         </li>
         <li class="mail-item">
-          ...
+          <div class="mail-avatar"><img src="../assets/img/img2.jpg" alt=""></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Howard Palmer</span>
+              <span class="mail-time">Aug 15</span>
+            </div>
+            <h6 class="mail-subject">Score Midnight Flash Deals</h6>
+            <p class="mail-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item">
+          <div class="mail-avatar"><img src="../assets/img/img3.jpg" alt=""></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Joyce Trimmer</span>
+              <span class="mail-time">Aug 10</span>
+            </div>
+            <h6 class="mail-subject">New Earnings Insights</h6>
+            <p class="mail-text">Tempo ribus autem quibus dam et aut officiis debitis aut rerum...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item">
+          <div class="mail-avatar"><span class="indigo">D</span></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Debra Edwards</span>
+              <span class="mail-time">Aug 08</span>
+            </div>
+            <h6 class="mail-subject">Please Verify Your Email Address</h6>
+            <p class="mail-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item">
+          <div class="mail-avatar"><img src="../assets/img/img4.jpg" alt=""></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Stephen Farris</span>
+              <span class="mail-time">Aug 08</span>
+            </div>
+            <h6 class="mail-subject">Reserve Your Spot Today</h6>
+            <p class="mail-text">Nemo enim ipsam voluptatem quia voluptas sit asper natur...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item">
+          <div class="mail-avatar"><span class="green">B</span></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Benjamin Backus</span>
+              <span class="mail-time">Aug 05</span>
+            </div>
+            <h6 class="mail-subject">Upcoming Annual Tech Talks</h6>
+            <p class="mail-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item">
+          <div class="mail-avatar"><img src="../assets/img/img5.jpg" alt=""></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">Criselda Paul</span>
+              <span class="mail-time">Aug 05</span>
+            </div>
+            <h6 class="mail-subject">Changes To Your Basic Plan</h6>
+            <p class="mail-text">Tempo ribus autem quibus dam et aut officiis debitis aut rerum...</p>
+          </div><!-- mail-item-body -->
+        </li>
+        <li class="mail-item">
+          <div class="mail-avatar"><span class="blue">J</span></div>
+          <div class="mail-item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="mail-sender">James Lavale</span>
+              <span class="mail-time">Aug 05</span>
+            </div>
+            <h6 class="mail-subject">Developer Position: Remote</h6>
+            <p class="mail-text">Exce sint occaecat cupid non proident, sunt in culpa qui officia deserunt...</p>
+          </div><!-- mail-item-body -->
         </li>
       </ul><!-- mail-group -->
 
     </div><!-- mailbox -->
 
+    <div class="mailcontent">
+      &nbsp;
+    </div><!-- mailcontent -->
+
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
     <script>
       $(document).ready(function() {
         'use strict'
+
+        new PerfectScrollbar('#mailGroup', {
+          suppressScrollX: true
+        });
 
         $('.sidebar .nav-link').on('click', function(e){
           e.preventDefault();

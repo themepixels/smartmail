@@ -1,0 +1,9 @@
+
+.mailcontent {
+  position: fixed;
+  top: 0;
+  left: $sidebar-width + 390px;
+  right: 0;
+  height: 100vh;
+  background-color: $color-bg-01;
+}
