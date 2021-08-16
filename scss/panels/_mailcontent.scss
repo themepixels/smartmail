@@ -7,3 +7,63 @@
   height: 100vh;
   background-color: $color-bg-01;
 }
+
+.mailcontent-header {
+  height: 80px;
+  padding: 20px 25px 10px;
+  display: flex;
+  align-items: center;
+
+  .mail-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav {
+    margin-left: auto;
+    position: relative;
+  }
+
+  .nav-link {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: $color-tx-02;
+
+    i { font-size: 21px; }
+
+    + .nav-link { margin-left: 5px; }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-bg-03, .6);
+    }
+
+    &:last-child { width: 24px; }
+  }
+}
+
+.mailcontent-sender {
+  padding-left: 15px;
+
+  h6 {
+    font-size: 14px;
+    color: $color-tx-01;
+    margin-bottom: 2px;
+
+    span {
+      color: $color-tx-03;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+}

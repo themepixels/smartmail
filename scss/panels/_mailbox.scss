@@ -12,22 +12,46 @@
   display: flex;
   align-items: center;
   padding: 20px 20px 10px;
+  position: relative;
+
+  .mail-avatar {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    z-index: 10;
+    display: block;
+    text-decoration: none;
+
+    span {
+      background-color: $color-primary;
+      font-size: 14px;
+    }
+  }
 }
 
 .mailbox-search {
+  position: relative;
   width: 100%;
-  height: 40px;
+  height: 50px;
   padding: 0 10px;
   display: flex;
   align-items: center;
-  background-color: darken($color-bg-02, 2%);
+  background-color: #fff;
+  border: 1px solid $color-bg-03;
   border-radius: 5px;
+  box-shadow: 0 1px 1px rgba($color-bg-03, 0.25),
+              0 2px 2px rgba($color-bg-03, 0.20),
+              0 4px 4px rgba($color-bg-03, 0.15),
+              0 8px 8px rgba($color-bg-03, 0.10),
+              0 16px 16px rgba($color-bg-03, 0.05);
 
   i {
     font-size: 20px;
     line-height: 1;
     color: $color-tx-03;
-    text-indent: -1px;
+    margin-top: -2px;
   }
 
   .form-control {
@@ -36,6 +60,7 @@
     border-width: 0;
     font-size: 14px;
     padding-left: 8px;
+    padding-top: 5px;
 
     &:focus {
       box-shadow: none;
@@ -49,7 +74,12 @@
 
   &.onfocus {
     background-color: #fff;
-    box-shadow: 0 0 0 1.5px $color-secondary;
+    border-color: $color-secondary;
+    box-shadow: 0 1px 1px rgba($color-bg-03, 0.25),
+                0 2px 2px rgba($color-bg-03, 0.20),
+                0 4px 4px rgba($color-bg-03, 0.15),
+                0 8px 8px rgba($color-bg-03, 0.10),
+                0 16px 16px rgba($color-bg-03, 0.05);
   }
 }
 
@@ -235,6 +265,8 @@
 
     &.blue { background-color: lighten($blue, 25%); }
     &.green { background-color: lighten($green, 25%); }
+    &.yellow { background-color: lighten($yellow, 20%); }
+    &.red { background-color: lighten($red, 25%); }
     &.indigo { background-color: lighten($indigo, 25%); }
   }
 }
