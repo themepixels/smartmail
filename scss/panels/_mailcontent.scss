@@ -6,11 +6,38 @@
   right: 0;
   height: 100vh;
   background-color: $color-bg-01;
+  overflow: hidden;
+}
+
+.mailcontent-item {
+  position: relative;
+  padding: 0 25px 25px;
+
+  &:first-child .mailcontent-header { padding-top: 0; }
+}
+
+.mailcontent-subject {
+  padding: 24px 25px;
+  display: flex;
+
+  h4 {
+    flex: 1;
+    color: $color-tx-01;
+    font-weight: 400;
+    margin-right: 25px;
+    text-indent: -1px;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+
+  .nav {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
 }
 
 .mailcontent-header {
-  height: 80px;
-  padding: 20px 25px 10px;
+  padding: 15px 0;
   display: flex;
   align-items: center;
 
@@ -19,10 +46,12 @@
     height: 40px;
   }
 
-  .nav {
-    margin-left: auto;
-    position: relative;
-  }
+  .nav { padding-left: 10px; }
+}
+
+.mailcontent-subject,
+.mailcontent-header {
+  .nav { position: relative; }
 
   .nav-link {
     padding: 0;
@@ -34,21 +63,22 @@
     border-radius: 5px;
     color: $color-tx-02;
 
-    i { font-size: 21px; }
+    i { font-size: 20px; }
 
-    + .nav-link { margin-left: 5px; }
+    + .nav-link { margin-left: 2px; }
 
     &:hover,
     &:focus {
       background-color: rgba($color-bg-03, .6);
     }
 
-    &:last-child { width: 24px; }
+    &:last-child { width: 20px; }
   }
 }
 
 .mailcontent-sender {
-  padding-left: 15px;
+  flex: 1;
+  padding-left: 10px;
 
   h6 {
     font-size: 14px;
@@ -65,5 +95,85 @@
   p {
     margin-bottom: 0;
     font-size: 13px;
+  }
+}
+
+.mailcontent-time {
+  font-size: 11px;
+  color: $color-tx-03;
+  padding-left: 10px;
+}
+
+.mailcontent-body {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 5px;
+  @include shadow-sharp($color-bg-03);
+  font-size: 15px;
+  line-height: 1.7;
+
+  hr {
+    background-color: $color-tx-03;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.mailcontent-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-tx-03;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.attachment-group {
+  position: relative;
+  display: flex;
+}
+
+.attachment-item {
+  background-color: rgba($color-bg-02, .6);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  min-width: 240px;
+
+  + .attachment-item { margin-left: 10px; }
+}
+
+.attachment-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: inherit;
+  @include shadow-sharp($color-bg-03);
+
+  i {
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+
+.attachment-body {
+  flex: 1;
+  padding-left: 10px;
+
+  h6 {
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: $color-tx-01;
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+    color: $color-tx-03;
   }
 }

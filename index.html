@@ -79,7 +79,7 @@
               <span class="mail-sender">Mary Johnson</span>
               <span class="mail-time">12:23 PM</span>
             </div>
-            <h6 class="mail-subject">Reactivate and Reconnect</h6>
+            <h6 class="mail-subject">Reactivate and Reconnect <span>3</span></h6>
             <p class="mail-text">Excepteur sint occa cupidatat non proident, sunt in culpa qui officia...</p>
           </div><!-- mail-item-body -->
         </li>
@@ -175,20 +175,63 @@
 
     </div><!-- mailbox -->
 
-    <div class="mailcontent">
-      <div class="mailcontent-header">
-        <div class="mail-avatar"><img src="../assets/img/img1.jpg" alt=""></div>
-        <div class="mailcontent-sender">
-          <h6>Mary Johnson <span>&lt;maryjohnson@domain.com&gt;</span></h6>
-          <p>to: me</p>
-        </div><!-- mail-sender -->
+    <div id="mailContent" class="mailcontent">
+      <div class="mailcontent-subject">
+        <h4>Reactivate and Reconnect</h4>
         <nav class="nav">
           <a href="" class="nav-link"><i class="ri-archive-drawer-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-spam-2-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-price-tag-line"></i></a>
           <a href="" class="nav-link"><i class="ri-delete-bin-5-line"></i></a>
-          <a href="" class="nav-link"><i class="ri-reply-line"></i></a>
           <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
         </nav>
-      </div><!-- mailcontent-header -->
+      </div><!-- mailcontent-subject -->
+
+      <div class="mailcontent-group">
+        <div class="mailcontent-item">
+          <div class="mailcontent-header">
+            <div class="mail-avatar"><img src="../assets/img/img1.jpg" alt=""></div>
+            <div class="mailcontent-sender">
+              <h6>Mary Johnson <span>&lt;maryjohnson@domain.com&gt;</span></h6>
+              <p>to: me</p>
+            </div><!-- mail-sender -->
+            <div class="mailcontent-time">12:23 PM (2 hours ago)</div>
+            <nav class="nav">
+              <a href="" class="nav-link"><i class="ri-reply-line"></i></a>
+              <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+            </nav>
+          </div><!-- mailcontent-header -->
+          <div class="mailcontent-body">
+            <p>Hello, Themepixels Team!</p>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+            <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            <p>Best Regards,<br>Mary Johnson<br>Software Engineer - Themepixels, Inc.</p>
+
+            <hr>
+
+            <label class="mailcontent-label">2 Attachments</label>
+
+            <div class="attachment-group">
+              <div class="attachment-item">
+                <div class="attachment-icon text-primary"><i class="ri-file-zip-line"></i></div>
+                <div class="attachment-body">
+                  <h6>MarketingAssets.zip</h6>
+                  <span>812 KB</span>
+                </div>
+              </div><!-- attachment-item -->
+              <div class="attachment-item">
+                <div class="attachment-icon text-success"><i class="ri-file-excel-line"></i></div>
+                <div class="attachment-body">
+                  <h6>MarketingReports.xls</h6>
+                  <span>365 KB</span>
+                </div>
+              </div><!-- attachment-item -->
+            </div><!-- attachment-group -->
+
+          </div><!-- mailcontent-body -->
+        </div><!-- mailcontent-item -->
+      </div><!-- mailcontent-group -->
     </div><!-- mailcontent -->
 
     <script src="lib/jquery/jquery.min.js"></script>
@@ -200,6 +243,10 @@
         'use strict'
 
         new PerfectScrollbar('#mailGroup', {
+          suppressScrollX: true
+        });
+
+        new PerfectScrollbar('#mailContent', {
           suppressScrollX: true
         });
 
