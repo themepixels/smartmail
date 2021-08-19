@@ -1,5 +1,6 @@
 
 .mailcontent {
+  display: none;
   position: fixed;
   top: 0;
   left: $sidebar-width + 390px;
@@ -7,6 +8,11 @@
   height: 100vh;
   background-color: $color-bg-01;
   overflow: hidden;
+  @include transition(all 0.3s);
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
 }
 
 .mailcontent-item {

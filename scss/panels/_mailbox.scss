@@ -2,32 +2,75 @@
 .mailbox {
   position: fixed;
   top: 0;
-  left: $sidebar-width;
-  width: 390px;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   background-color: #fff;
+  @include transition(all 0.3s);
+
+  @include media-breakpoint-up(md) {
+    left: $sidebar-width;
+    width: 390px;
+  }
 }
 
 .mailbox-header {
   display: flex;
   align-items: center;
-  padding: 20px 20px 10px;
+  padding: 10px;
   position: relative;
+
+  @include media-breakpoint-up(md) {
+    padding: 20px 20px 10px;
+  }
 
   .mail-avatar {
     width: 32px;
     height: 32px;
     position: absolute;
-    top: 28px;
-    right: 30px;
+    top: 18px;
+    right: 18px;
     z-index: 10;
     display: block;
     text-decoration: none;
+
+    @include media-breakpoint-up(md) {
+      top: 28px;
+      right: 30px;
+    }
 
     span {
       background-color: $color-primary;
       font-size: 14px;
     }
+  }
+}
+
+.mailbox-menu {
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-indent: -2px;
+  color: $gray-800;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+
+  i {
+    font-size: 24px;
+    line-height: 1;
   }
 }
 
@@ -84,10 +127,14 @@
 }
 
 .mailbox-option {
-  padding: 0 20px 10px;
+  padding: 0 10px 10px;
   display: flex;
   align-items: center;
   font-size: 13px;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 20px 10px;
+  }
 
   .dropdown-check {
     width: 32px;
@@ -95,7 +142,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    //background-color: $color-bg-02;
+    background-color: rgba($color-bg-02, .75);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     color: $color-tx-02;
@@ -133,14 +180,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16px;
+    width: 18px;
     height: 32px;
     text-decoration: none;
     color: $color-tx-02;
     font-size: 18px;
-    //background-color: $color-bg-02;
+    background-color: rgba($color-bg-02, .75);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    margin-left: 1px;
 
     &:hover,
     &:focus { background-color: darken($color-bg-02, 2%); }
@@ -160,7 +208,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    //background-color: $color-bg-02;
+    background-color: rgba($color-bg-02, .75);
     border-radius: 3px;
     color: $color-tx-02;
     text-decoration: none;
@@ -190,11 +238,16 @@
 
 .mail-group {
   position: relative;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 0;
   list-style: none;
-  height: calc(100vh - 105px);
+  height: calc(100vh - 110px);
   overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 20px;
+    height: calc(100vh - 120px);
+  }
 }
 
 .mail-item {
@@ -205,6 +258,8 @@
   background-color: $color-bg-01;
   border: 1px solid transparent;
   display: flex;
+
+  &:last-of-type { margin-bottom: 10px; }
 
   + .mail-item { margin-top: 2px; }
 

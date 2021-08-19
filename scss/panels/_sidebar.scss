@@ -1,11 +1,22 @@
+.sidebar-toggle {
+  .sidebar { left: -$sidebar-width; }
+  .mailbox { left: 0; }
+  .mailcontent { left: 390px; }
+}
+
 
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -$sidebar-width;
   width: $sidebar-width;
   height: 100vh;
   background-color: $color-primary;
+  @include transition(all 0.3s);
+
+  @include media-breakpoint-up(md) {
+    left: 0;
+  }
 }
 
 .sidebar-header {
