@@ -384,7 +384,7 @@
 
         $('.nav-link-close').on('click', function(e){
           e.preventDefault();
-          $(this).closest('.compose').addClass('d-none');
+          $(this).closest('.compose').addClass('d-none').removeClass('minimize fullscreen');
           $('.menu-compose').removeClass('d-none');
         });
       });
