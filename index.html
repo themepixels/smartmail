@@ -79,7 +79,7 @@
               <span class="mail-sender">Mary Johnson</span>
               <span class="mail-time">12:23 PM</span>
             </div>
-            <h6 class="mail-subject">Reactivate and Reconnect <span>3</span></h6>
+            <h6 class="mail-subject">Reactivate and Reconnect <span>2</span></h6>
             <p class="mail-text">Excepteur sint occa cupidatat non proident, sunt in culpa qui officia...</p>
           </div><!-- mail-item-body -->
         </li>
@@ -273,7 +273,49 @@
       </div><!-- mailcontent-footer -->
     </div><!-- mailcontent -->
 
-    <a href="" class="menu-compose"><i class="ri-pencil-fill"></i></a>
+    <a href="" class="menu-compose"><i class="ri-pencil-line"></i></a>
+
+    <div class="compose d-none">
+      <div class="compose-content">
+        <div class="compose-header">
+          <h6 class="compose-title">New Message</h6>
+          <nav class="nav">
+            <a href="#" class="nav-link nav-link-minimize"><i class="ri-subtract-line"></i></a>
+            <a href="#" class="nav-link nav-link-fullscreen">
+              <i class="ri-fullscreen-line"></i>
+              <i class="ri-fullscreen-exit-line"></i>
+            </a>
+            <a href="#" class="nav-link nav-link-close"><i class="ri-close-line"></i></a>
+          </nav>
+        </div><!-- compose-header -->
+        <div class="compose-body">
+          <div class="form-group"><input type="text" class="form-control" placeholder="Enter receipient's email address"></div>
+          <div class="form-group"><input type="text" class="form-control" placeholder="Enter subject"></div>
+          <div class="form-group"><textarea class="form-control" rows="10"></textarea></div>
+        </div><!-- compose-body -->
+        <nav class="nav nav-toolbar">
+          <a href="" class="nav-link"><i class="ri-arrow-go-back-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-arrow-go-forward-line"></i></a>
+          <span class="nav-separator"></span>
+          <a href="" class="nav-link"><i class="ri-text"></i></a>
+          <a href="" class="nav-link"><i class="ri-bold"></i></a>
+          <a href="" class="nav-link"><i class="ri-italic"></i></a>
+          <a href="" class="nav-link"><i class="ri-underline"></i></a>
+          <a href="" class="nav-link"><i class="ri-align-left"></i></a>
+          <a href="" class="nav-link"><i class="ri-list-check"></i></a>
+          <span class="nav-separator"></span>
+          <a href="" class="nav-link"><i class="ri-attachment-2"></i></a>
+          <a href="" class="nav-link"><i class="ri-link"></i></a>
+          <a href="" class="nav-link"><i class="ri-image-add-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-emotion-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+        </nav><!-- nav-toolbar -->
+        <div class="compose-footer">
+          <button type="submit" class="btn btn-primary btn-icontext"><i class="ri-send-plane-fill me-2"></i> Send</button>
+          <button class="btn btn-white btn-icon"><i class="ri-delete-bin-line"></i></button>
+        </div><!-- compose-footer -->
+      </div><!-- compose-content -->
+    </div><!-- compose -->
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -320,10 +362,30 @@
 
 
         // Mail Content
-
         $('.mailcontent-header').on('click', function(){
           $(this).siblings('.mailcontent-body').toggleClass('d-none');
           mc.update();
+        });
+
+        $('.menu-compose').on('click', function(e){
+          e.preventDefault();
+          $(this).addClass('d-none');
+          $('.compose').removeClass('d-none');
+        });
+
+        $('.compose-title, .nav-link-minimize').on('click', function(e){
+          $(this).closest('.compose').toggleClass('minimize');
+        });
+
+        $('.nav-link-fullscreen').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('.compose').toggleClass('fullscreen');
+        });
+
+        $('.nav-link-close').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('.compose').addClass('d-none');
+          $('.menu-compose').removeClass('d-none');
         });
       });
     </script>

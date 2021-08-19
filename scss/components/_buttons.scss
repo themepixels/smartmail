@@ -14,13 +14,13 @@
   background-color: #fff;
   color: $color-tx-02;
   border-width: 1px;
-  border-color: $gray-400;
+  border-color: rgba($gray-400, .75);
 
   &:hover,
   &:focus {
-    background-color: #fff;
-    color: $color-tx-02;
-    border-color: $gray-500;
+    background-color: lighten($color-secondary, 26%);
+    color: $color-secondary;
+    border-color: $color-secondary;
   }
 }
 
@@ -32,5 +32,30 @@
     line-height: 1;
     font-size: 18px;
     text-indent: -1px;
+  }
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.btn-white {
+  border-color: $gray-400;
+  color: $color-tx-02;
+
+  &:hover,
+  &:focus {
+    border-color: $gray-500;
+    color: $color-tx-01;
   }
 }
