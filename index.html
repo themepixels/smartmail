@@ -66,7 +66,7 @@
         <a href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>
 
         <div class="ms-auto d-flex align-items-center">
-          <span>1-20 of 1,060</span>
+          <span>1-10 of 1,060</span>
           <a href="" class="pager prev"><i class="ri-arrow-left-s-line"></i></a>
           <a href="" class="pager next"><i class="ri-arrow-right-s-line"></i></a>
         </div>
@@ -84,7 +84,7 @@
           </div><!-- mail-item-body -->
         </li>
         <li class="mail-item unread">
-          <div class="mail-avatar"><span class="yellow">p</span></div>
+          <div class="mail-avatar"><span class="green">p</span></div>
           <div class="mail-item-body">
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Patricia Anderson</span>
@@ -193,20 +193,56 @@
             <div class="mail-avatar"><img src="../assets/img/img1.jpg" alt=""></div>
             <div class="mailcontent-sender">
               <h6>Mary Johnson <span>&lt;maryjohnson@domain.com&gt;</span></h6>
-              <p>to: me</p>
+              <p>to: Themepixels</p>
             </div><!-- mail-sender -->
             <div class="mailcontent-time">12:23 PM (2 hours ago)</div>
             <nav class="nav">
+              <a href="" class="nav-link"><i class="ri-star-line"></i></a>
               <a href="" class="nav-link"><i class="ri-reply-line"></i></a>
               <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
             </nav>
           </div><!-- mailcontent-header -->
-          <div class="mailcontent-body">
+          <div class="mailcontent-body d-none">
             <p>Hello, Themepixels Team!</p>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
             <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
             <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
             <p>Best Regards,<br>Mary Johnson<br>Software Engineer - Themepixels, Inc.</p>
+
+          </div><!-- mailcontent-body -->
+        </div><!-- mailcontent-item -->
+        <div class="mailcontent-item">
+          <div class="mailcontent-header">
+            <div class="mail-avatar"><span class="bg-primary">m</span></div>
+            <div class="mailcontent-sender">
+              <h6>Themepixels <span>&lt;me@themepixels.me&gt;</span></h6>
+              <p>to: Mary Johnson</p>
+            </div><!-- mail-sender -->
+            <div class="mailcontent-time">11:15 AM (3 hours ago)</div>
+            <nav class="nav">
+              <a href="" class="nav-link"><i class="ri-star-line"></i></a>
+              <a href="" class="nav-link"><i class="ri-reply-line"></i></a>
+              <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+            </nav>
+          </div><!-- mailcontent-header -->
+          <div class="mailcontent-body">
+            <p>Hi, Mary Johnson,</p>
+            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+
+            <div class="card card-mail mb-3">
+              <div class="card-body">
+                <h6 class="card-title">Reactivate &amp; Reconnect</h6>
+                <ul>
+                  <li>Exce sint occaecat cupid non proident, sunt in culpa qui.</li>
+                  <li>Tempo ribus autem quibus dam et aut officiis debitis aut rerum.</li>
+                  <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</li>
+                </ul>
+              </div><!-- card-body -->
+            </div><!-- card -->
+
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+            <p>Best Regards,<br>Themepixels, Inc.</p>
 
             <hr>
 
@@ -216,23 +252,28 @@
               <div class="attachment-item">
                 <div class="attachment-icon text-primary"><i class="ri-file-zip-line"></i></div>
                 <div class="attachment-body">
-                  <h6>MarketingAssets.zip</h6>
+                  <h6><a href="#">MarketingAssets.zip</a></h6>
                   <span>812 KB</span>
                 </div>
               </div><!-- attachment-item -->
               <div class="attachment-item">
                 <div class="attachment-icon text-success"><i class="ri-file-excel-line"></i></div>
                 <div class="attachment-body">
-                  <h6>MarketingReports.xls</h6>
+                  <h6><a href="#">MarketingReports.xls</a></h6>
                   <span>365 KB</span>
                 </div>
               </div><!-- attachment-item -->
             </div><!-- attachment-group -->
-
           </div><!-- mailcontent-body -->
         </div><!-- mailcontent-item -->
       </div><!-- mailcontent-group -->
+      <div class="mailcontent-footer">
+        <a href="#" class="btn btn-secondary btn-icontext"><i class="ri-reply-line me-1"></i> Reply</a>
+        <a href="" class="btn btn-secondary btn-icontext"><i class="ri-share-forward-line me-1"></i> Forward</a>
+      </div><!-- mailcontent-footer -->
     </div><!-- mailcontent -->
+
+    <a href="" class="menu-compose"><i class="ri-pencil-fill"></i></a>
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -246,7 +287,7 @@
           suppressScrollX: true
         });
 
-        new PerfectScrollbar('#mailContent', {
+        const mc = new PerfectScrollbar('#mailContent', {
           suppressScrollX: true
         });
 
@@ -269,6 +310,20 @@
         $('.dropdown-check').on('click', function(e){
           e.preventDefault();
           $(this).toggleClass('checkall');
+        });
+
+        $('.mail-item').on('click', function(e){
+          e.preventDefault();
+          $(this).addClass('active').siblings().removeClass('active');
+          $(this).removeClass('unread');
+        });
+
+
+        // Mail Content
+
+        $('.mailcontent-header').on('click', function(){
+          $(this).siblings('.mailcontent-body').toggleClass('d-none');
+          mc.update();
         });
       });
     </script>

@@ -9,6 +9,9 @@
 // Bootstrap Framework
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// Components
+@import "components/buttons";
+
 // Panels
 @import "panels/sidebar";
 @import "panels/mailbox";

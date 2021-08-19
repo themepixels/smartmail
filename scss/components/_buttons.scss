@@ -1,0 +1,36 @@
+.btn {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 12px;
+  line-height: 1.467;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: $color-tx-02;
+  border-width: 1px;
+  border-color: $gray-400;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: $color-tx-02;
+    border-color: $gray-500;
+  }
+}
+
+.btn-icontext {
+  display: flex;
+  align-items: center;
+
+  i {
+    line-height: 1;
+    font-size: 18px;
+    text-indent: -1px;
+  }
+}

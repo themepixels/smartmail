@@ -3,18 +3,29 @@ $body-bg:                         #ffffff;
 $body-color:                      #666d8c;
 
 // Colors
-$green:                           #06ae23;
+$gray-100:                        #f7f8fa;
+$gray-200:                        #e9eaf0;
+$gray-300:                        #dfe0e5;
+$gray-400:                        #cccfd9;
+$gray-500:                        #aeb1bd;
+$gray-600:                        #6b707d;
+$gray-700:                        #494c57;
+$gray-800:                        #343740;
+$gray-900:                        #212329;
 
 $color-primary:                   #3a68f2;
 $color-secondary:                 #7695f5;
 
-$color-tx-01:                     #2a2b2f;
-$color-tx-02:                     #666d8c;
-$color-tx-03:                     #a0a7c4;
+$color-tx-01:                     $gray-900;
+$color-tx-02:                     $gray-600;
+$color-tx-03:                     $gray-500;
 
 $color-bg-01:                     #f5f6fa;
 $color-bg-02:                     #f0f2f7;
-$color-bg-03:                     #dce1ec;
+$color-bg-03:                     #dde1ed;
+
+$blue:                            $color-primary;
+$green:                           #06ae23;
 
 // Fonts
 $ff-primary:                      'Lexend', sans-serif;

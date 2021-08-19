@@ -34,7 +34,7 @@
 .mailbox-search {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: 48px;
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@
   i {
     font-size: 20px;
     line-height: 1;
-    color: $color-tx-03;
+    color: $color-tx-02;
     margin-top: -2px;
   }
 
@@ -84,14 +84,14 @@
 }
 
 .mailbox-option {
-  padding: 0 20px 5px;
+  padding: 0 20px 10px;
   display: flex;
   align-items: center;
   font-size: 13px;
 
   .dropdown-check {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +134,7 @@
     align-items: center;
     justify-content: center;
     width: 16px;
-    height: 30px;
+    height: 32px;
     text-decoration: none;
     color: $color-tx-02;
     font-size: 18px;
@@ -155,8 +155,8 @@
 
   .pager {
     position: relative;
-    width: 26px;
-    height: 30px;
+    width: 28px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +190,7 @@
 
 .mail-group {
   position: relative;
-  padding: 5px 20px 0;
+  padding: 0 20px;
   margin: 0;
   list-style: none;
   height: calc(100vh - 105px);
@@ -212,8 +212,8 @@
   &:focus {
     cursor: pointer;
     z-index: 6;
-    background-color: $color-bg-02;
-    @include shadow-sharp($gray-400);
+    border-color: rgba($color-secondary, .6);
+    background-color: rgba($color-bg-01, .6);
   }
 
   &.active {
@@ -267,7 +267,7 @@
     &.green { background-color: lighten($green, 8%); }
     &.yellow { background-color: lighten($yellow, 10%); }
     &.red { background-color: lighten($red, 25%); }
-    &.indigo { background-color: lighten($indigo, 25%); }
+    &.indigo { background-color: lighten($indigo, 15%); }
   }
 }
 

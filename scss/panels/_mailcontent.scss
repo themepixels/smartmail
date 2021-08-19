@@ -11,13 +11,13 @@
 
 .mailcontent-item {
   position: relative;
-  padding: 0 25px 25px;
+  padding: 0 25px;
 
-  &:first-child .mailcontent-header { padding-top: 0; }
+  &:first-child {}
 }
 
 .mailcontent-subject {
-  padding: 24px 25px;
+  padding: 25px;
   display: flex;
 
   h4 {
@@ -32,8 +32,11 @@
 
   .nav {
     flex-shrink: 0;
+    margin-top: 2.5px;
     margin-left: auto;
   }
+
+  .nav-link i { font-size: 20px; }
 }
 
 .mailcontent-header {
@@ -42,11 +45,12 @@
   align-items: center;
 
   .mail-avatar {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .nav { padding-left: 10px; }
+  .nav-link i { font-size: 18px; }
 }
 
 .mailcontent-subject,
@@ -55,15 +59,13 @@
 
   .nav-link {
     padding: 0;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     color: $color-tx-02;
-
-    i { font-size: 20px; }
 
     + .nav-link { margin-left: 2px; }
 
@@ -72,7 +74,7 @@
       background-color: rgba($color-bg-03, .6);
     }
 
-    &:last-child { width: 20px; }
+    &:last-child { width: 16px; }
   }
 }
 
@@ -99,18 +101,22 @@
 }
 
 .mailcontent-time {
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 400;
   color: $color-tx-03;
   padding-left: 10px;
 }
 
 .mailcontent-body {
   background-color: #fff;
-  padding: 20px 25px;
+  padding: 20px 25px 25px;
+  margin: 10px 0;
   border-radius: 5px;
   @include shadow-sharp($color-bg-03);
   font-size: 15px;
+  font-weight: 400;
   line-height: 1.7;
+  color: $color-tx-02;
 
   hr {
     background-color: $color-tx-03;
@@ -171,9 +177,85 @@
     color: $color-tx-01;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus { color: $color-primary; }
+  }
+
   span {
     display: block;
     font-size: 12px;
     color: $color-tx-03;
+  }
+}
+
+.mailcontent-footer {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+
+  .btn {
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    + .btn { margin-left: 10px; }
+  }
+}
+
+.card-mail {
+  border-color: $color-secondary;
+  background-color: rgba($color-secondary, .08);
+  border-width: 2px;
+  border-radius: 0;
+
+  .card-body {
+    padding: 20px 25px;
+    font-size: 14px;
+  }
+
+  .card-title {
+    color: $color-tx-01;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}
+
+.menu-compose {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-color: $color-primary;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  @include transition(all 0.2s);
+  @include shadow-sharp($gray-400);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    color: #fff;
+  }
+
+  i {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
   }
 }
