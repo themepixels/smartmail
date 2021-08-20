@@ -133,7 +133,7 @@
   font-size: 13px;
 
   @include media-breakpoint-up(md) {
-    padding: 0 20px 10px;
+    padding: 5px 20px 15px;
   }
 
   span {
@@ -201,7 +201,7 @@
     &:focus { background-color: $color-bg-02; }
 
     i {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1;
       border-radius: 2px;
 
@@ -287,12 +287,12 @@
   padding: 0 10px;
   margin: 0;
   list-style: none;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 115px);
   overflow: hidden;
 
   @include media-breakpoint-up(md) {
     padding: 0 20px;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 130px);
   }
 }
 
@@ -333,12 +333,14 @@
   }
 
   &.active {
-    @include media-breakpoint-up(md) {
-      z-index: 5;
-      background-color: rgba(#fff, .75);
-      border-color: $color-secondary;
-      @include shadow-sharp($gray-400);
-    }
+    z-index: 5;
+    background-color: rgba(#fff, .75);
+    border-color: $color-secondary;
+    @include shadow-sharp($gray-400);
+  }
+
+  &.selected {
+    background-color: lighten($color-secondary, 24%);
   }
 }
 
@@ -383,11 +385,28 @@
 
 .mail-sender {
   font-size: 12px;
+  margin-right: auto;
 }
 
 .mail-time {
   font-size: 11px;
   color: $color-tx-03;
+  margin-right: 5px;
+}
+
+.mail-star {
+  font-size: 14px;
+  line-height: 1;
+  position: relative;
+  top: .5px;
+
+  i:last-child { display: none; }
+
+  &.active {
+    color: $yellow;
+    i:first-child { display: none; }
+    i:last-child { display: inline; }
+  }
 }
 
 .mail-subject {

@@ -66,12 +66,12 @@
           </a>
           <a href="" class="dropdown-link" data-bs-toggle="dropdown"><i class="ri-arrow-down-s-line"></i></a>
           <div class="dropdown-menu">
-            <a href="" class="dropdown-item active"><i class="ri-check-fill"></i> All</a>
-            <a href="" class="dropdown-item"><i class="ri-check-line"></i> None</a>
-            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Read</a>
-            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Unread</a>
-            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Starred</a>
-            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Custom</a>
+            <a href="" class="dropdown-item all"><i class="ri-check-fill"></i> All</a>
+            <a href="" class="dropdown-item none active"><i class="ri-check-line"></i> None</a>
+            <a href="" class="dropdown-item read"><i class="ri-check-line"></i> Read</a>
+            <a href="" class="dropdown-item unread"><i class="ri-check-line"></i> Unread</a>
+            <a href="" class="dropdown-item starred"><i class="ri-check-line"></i> Starred</a>
+            <a href="" class="dropdown-item custom"><i class="ri-check-line"></i> Custom</a>
           </div><!-- dropdown-menu -->
         </div><!-- mailbox-select -->
 
@@ -82,12 +82,13 @@
         </div>
       </div><!-- mailbox-option -->
       <ul id="mailGroup" class="mail-group">
-        <li class="mail-item unread">
+        <li class="mail-item">
           <div class="mail-avatar"><img src="../assets/img/img1.jpg" alt=""></div>
           <div class="mail-item-body">
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
               <span class="mail-sender">Mary Johnson</span>
               <span class="mail-time">12:23 PM</span>
+              <span class="mail-star"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Reactivate and Reconnect <span>2</span></h6>
             <p class="mail-text">Excepteur sint occa cupidatat non proident, sunt in culpa qui officia...</p>
@@ -99,17 +100,19 @@
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Patricia Anderson</span>
               <span class="mail-time">Yesterday</span>
+              <span class="mail-star"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Score Midnight Flash Deals</h6>
             <p class="mail-text">Nemo enim ipsam voluptatem quia voluptas sit asper natur...</p>
           </div><!-- mail-item-body -->
         </li>
-        <li class="mail-item">
+        <li class="mail-item unread">
           <div class="mail-avatar"><img src="../assets/img/img2.jpg" alt=""></div>
           <div class="mail-item-body">
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Howard Palmer</span>
               <span class="mail-time">Aug 15</span>
+              <span class="mail-star"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Score Midnight Flash Deals</h6>
             <p class="mail-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet...</p>
@@ -121,6 +124,7 @@
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Joyce Trimmer</span>
               <span class="mail-time">Aug 10</span>
+              <span class="mail-star active"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">New Earnings Insights</h6>
             <p class="mail-text">Tempo ribus autem quibus dam et aut officiis debitis aut rerum...</p>
@@ -132,17 +136,19 @@
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Debra Edwards</span>
               <span class="mail-time">Aug 08</span>
+              <span class="mail-star active"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Please Verify Your Email Address</h6>
             <p class="mail-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit...</p>
           </div><!-- mail-item-body -->
         </li>
-        <li class="mail-item">
+        <li class="mail-item unread">
           <div class="mail-avatar"><img src="../assets/img/img4.jpg" alt=""></div>
           <div class="mail-item-body">
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Stephen Farris</span>
               <span class="mail-time">Aug 08</span>
+              <span class="mail-star"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Reserve Your Spot Today</h6>
             <p class="mail-text">Nemo enim ipsam voluptatem quia voluptas sit asper natur...</p>
@@ -154,6 +160,7 @@
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Benjamin Backus</span>
               <span class="mail-time">Aug 05</span>
+              <span class="mail-star"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Upcoming Annual Tech Talks</h6>
             <p class="mail-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet...</p>
@@ -165,6 +172,7 @@
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">Criselda Paul</span>
               <span class="mail-time">Aug 05</span>
+              <span class="mail-star"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Changes To Your Basic Plan</h6>
             <p class="mail-text">Tempo ribus autem quibus dam et aut officiis debitis aut rerum...</p>
@@ -176,6 +184,7 @@
             <div class="d-flex align-items-center justify-content-between">
               <span class="mail-sender">James Lavale</span>
               <span class="mail-time">Aug 05</span>
+              <span class="mail-star active"><i class="ri-star-line"></i><i class="ri-star-fill"></i></span>
             </div>
             <h6 class="mail-subject">Developer Position: Remote</h6>
             <p class="mail-text">Exce sint occaecat cupid non proident, sunt in culpa qui officia deserunt...</p>

@@ -7763,7 +7763,7 @@ textarea.form-control-lg {
   font-size: 13px; }
   @media (min-width: 768px) {
     .mailbox-option {
-      padding: 0 20px 10px; } }
+      padding: 5px 20px 15px; } }
   .mailbox-option span {
     margin-right: 10px;
     color: #a1a8bb;
@@ -7815,7 +7815,7 @@ textarea.form-control-lg {
     .mailbox-select .dropdown-check:hover, .mailbox-select .dropdown-check:focus {
       background-color: #f0f2f7; }
     .mailbox-select .dropdown-check i {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1;
       border-radius: 2px; }
       .mailbox-select .dropdown-check i:not(:first-child) {
@@ -7883,12 +7883,12 @@ textarea.form-control-lg {
   padding: 0 10px;
   margin: 0;
   list-style: none;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 115px);
   overflow: hidden; }
   @media (min-width: 768px) {
     .mail-group {
       padding: 0 20px;
-      height: calc(100vh - 120px); } }
+      height: calc(100vh - 130px); } }
 
 .mail-item {
   position: relative;
@@ -7916,12 +7916,13 @@ textarea.form-control-lg {
     .mail-item.unread .mail-subject {
       font-weight: 500;
       color: #212329; }
-  @media (min-width: 768px) {
-    .mail-item.active {
-      z-index: 5;
-      background-color: rgba(255, 255, 255, 0.75);
-      border-color: #7695f5;
-      box-shadow: 0 1px 1px rgba(204, 207, 217, 0.25), 0 2px 2px rgba(204, 207, 217, 0.2), 0 4px 4px rgba(204, 207, 217, 0.15), 0 8px 8px rgba(204, 207, 217, 0.1), 0 16px 16px rgba(204, 207, 217, 0.05); } }
+  .mail-item.active {
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: #7695f5;
+    box-shadow: 0 1px 1px rgba(204, 207, 217, 0.25), 0 2px 2px rgba(204, 207, 217, 0.2), 0 4px 4px rgba(204, 207, 217, 0.15), 0 8px 8px rgba(204, 207, 217, 0.1), 0 16px 16px rgba(204, 207, 217, 0.05); }
+  .mail-item.selected {
+    background-color: #e8edfd; }
 
 .mail-avatar {
   flex-shrink: 0;
@@ -7961,11 +7962,27 @@ textarea.form-control-lg {
     margin-bottom: 2px; }
 
 .mail-sender {
-  font-size: 12px; }
+  font-size: 12px;
+  margin-right: auto; }
 
 .mail-time {
   font-size: 11px;
-  color: #a1a8bb; }
+  color: #a1a8bb;
+  margin-right: 5px; }
+
+.mail-star {
+  font-size: 14px;
+  line-height: 1;
+  position: relative;
+  top: .5px; }
+  .mail-star i:last-child {
+    display: none; }
+  .mail-star.active {
+    color: #ffc107; }
+    .mail-star.active i:first-child {
+      display: none; }
+    .mail-star.active i:last-child {
+      display: inline; }
 
 .mail-subject {
   font-size: 14px;
