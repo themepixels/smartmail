@@ -7512,7 +7512,7 @@ textarea.form-control-lg {
 
 .btn-secondary {
   background-color: #fff;
-  color: #6b707d;
+  color: #6b748f;
   border-width: 1px;
   border-color: rgba(204, 207, 217, 0.75); }
   .btn-secondary:hover, .btn-secondary:focus {
@@ -7541,7 +7541,7 @@ textarea.form-control-lg {
 
 .btn-white {
   border-color: #cccfd9;
-  color: #6b707d; }
+  color: #6b748f; }
   .btn-white:hover, .btn-white:focus {
     border-color: #aeb1bd;
     color: #212329; }
@@ -7737,7 +7737,7 @@ textarea.form-control-lg {
   .mailbox-search i {
     font-size: 20px;
     line-height: 1;
-    color: #6b707d;
+    color: #6b748f;
     margin-top: -2px; }
   .mailbox-search .form-control {
     flex: 1;
@@ -7749,7 +7749,7 @@ textarea.form-control-lg {
     .mailbox-search .form-control:focus {
       box-shadow: none; }
     .mailbox-search .form-control::placeholder {
-      color: #aeb1bd;
+      color: #a1a8bb;
       text-shadow: none; }
   .mailbox-search.onfocus {
     background-color: #fff;
@@ -7766,7 +7766,7 @@ textarea.form-control-lg {
       padding: 0 20px 10px; } }
   .mailbox-option span {
     margin-right: 10px;
-    color: #aeb1bd;
+    color: #a1a8bb;
     font-size: 12px;
     letter-spacing: .2px; }
   .mailbox-option .pager {
@@ -7780,7 +7780,7 @@ textarea.form-control-lg {
     border: 1px solid #cccfd9;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    color: #6b707d;
+    color: #6b748f;
     text-decoration: none;
     box-shadow: 0 1px 1px rgba(233, 234, 240, 0.25), 0 2px 2px rgba(233, 234, 240, 0.2), 0 4px 4px rgba(233, 234, 240, 0.15), 0 8px 8px rgba(233, 234, 240, 0.1), 0 16px 16px rgba(233, 234, 240, 0.05); }
     .mailbox-option .pager:hover, .mailbox-option .pager:focus {
@@ -7810,7 +7810,7 @@ textarea.form-control-lg {
     border: 1px solid #cccfd9;
     border-top-left-radius: inherit;
     border-bottom-left-radius: inherit;
-    color: #6b707d;
+    color: #6b748f;
     text-decoration: none; }
     .mailbox-select .dropdown-check:hover, .mailbox-select .dropdown-check:focus {
       background-color: #f0f2f7; }
@@ -7841,7 +7841,7 @@ textarea.form-control-lg {
     width: 18px;
     height: 32px;
     text-decoration: none;
-    color: #6b707d;
+    color: #6b748f;
     font-size: 18px;
     border: 1px solid #cccfd9;
     border-top-right-radius: inherit;
@@ -7965,7 +7965,7 @@ textarea.form-control-lg {
 
 .mail-time {
   font-size: 11px;
-  color: #aeb1bd; }
+  color: #a1a8bb; }
 
 .mail-subject {
   font-size: 14px;
@@ -7974,11 +7974,11 @@ textarea.form-control-lg {
   margin-bottom: 5px; }
   .mail-subject span {
     font-weight: 300;
-    color: #aeb1bd; }
+    color: #a1a8bb; }
 
 .mail-text {
   margin-bottom: 0;
-  color: #6b707d;
+  color: #6b748f;
   font-size: 13px; }
 
 .mailcontent {
@@ -8045,7 +8045,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  color: #6b707d; }
+  color: #6b748f; }
   .mailcontent-subject .nav-link + .nav-link,
   .mailcontent-header .nav-link + .nav-link {
     margin-left: 2px; }
@@ -8065,7 +8065,7 @@ textarea.form-control-lg {
     color: #212329;
     margin-bottom: 2px; }
     .mailcontent-sender h6 span, .mailcontent-sender .h6 span {
-      color: #aeb1bd;
+      color: #a1a8bb;
       font-weight: 400;
       font-size: 13px; }
   .mailcontent-sender p {
@@ -8075,7 +8075,7 @@ textarea.form-control-lg {
 .mailcontent-time {
   font-size: 12px;
   font-weight: 400;
-  color: #aeb1bd;
+  color: #a1a8bb;
   padding-left: 10px; }
 
 .mailcontent-body {
@@ -8087,9 +8087,9 @@ textarea.form-control-lg {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
-  color: #6b707d; }
+  color: #6b748f; }
   .mailcontent-body hr {
-    background-color: #aeb1bd;
+    background-color: #a1a8bb;
     margin-top: 25px;
     margin-bottom: 25px; }
 
@@ -8098,7 +8098,7 @@ textarea.form-control-lg {
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #aeb1bd;
+  color: #a1a8bb;
   letter-spacing: 1px;
   margin-bottom: 15px; }
 
@@ -8144,7 +8144,7 @@ textarea.form-control-lg {
   .attachment-body span {
     display: block;
     font-size: 12px;
-    color: #aeb1bd; }
+    color: #a1a8bb; }
 
 .mailcontent-footer {
   padding: 25px;
@@ -8200,6 +8200,24 @@ textarea.form-control-lg {
     font-size: 28px;
     font-weight: 400;
     line-height: 1; }
+
+.mailcontent-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .mailcontent-placeholder i {
+    font-size: 128px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #a1a8bb;
+    opacity: .6; }
+  .mailcontent-placeholder h5, .mailcontent-placeholder .h5 {
+    font-weight: 400;
+    color: #a1a8bb;
+    margin-bottom: 0; }
 
 .compose {
   position: fixed;
@@ -8282,7 +8300,7 @@ textarea.form-control-lg {
     border-bottom-color: #dde1ed;
     color: #212329; }
     .compose-body input.form-control::placeholder {
-      color: #aeb1bd;
+      color: #a1a8bb;
       text-shadow: none; }
     .compose-body input.form-control:focus {
       box-shadow: none; }

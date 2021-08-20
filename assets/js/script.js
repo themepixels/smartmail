@@ -48,6 +48,9 @@ $(function(){
     e.preventDefault();
     $(this).addClass('active').siblings().removeClass('active');
     $(this).removeClass('unread');
+
+    $('.mailcontent-placeholder').siblings().removeClass('d-none');
+    $(',mailcontent-placeholder').addClass('d-none');
   });
 
 

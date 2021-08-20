@@ -265,3 +265,26 @@
     line-height: 1;
   }
 }
+
+.mailcontent-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 128px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: $color-tx-03;
+    opacity: .6;
+  }
+
+  h5 {
+    font-weight: 400;
+    color: $color-tx-03;
+    margin-bottom: 0;
+  }
+}
