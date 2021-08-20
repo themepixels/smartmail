@@ -16,7 +16,6 @@
     <title>SmartMail</title>
 
     <!-- Vendor CSS -->
-    <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/remixicon/fonts/remixicon.css" rel="stylesheet">
 
     <!-- Template CSS -->
@@ -59,12 +58,22 @@
       </div><!-- mailbox-header -->
 
       <div class="mailbox-option">
-        <a href="" class="dropdown-check">
-          <i class="ri-checkbox-blank-line"></i>
-          <i class="ri-checkbox-fill"></i>
-          <i class="ri-checkbox-indeterminate-fill"></i>
-        </a>
-        <a href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>
+        <div class="mailbox-select dropdown">
+          <a href="" class="dropdown-check">
+            <i class="ri-checkbox-blank-line"></i>
+            <i class="ri-checkbox-fill"></i>
+            <i class="ri-checkbox-indeterminate-fill"></i>
+          </a>
+          <a href="" class="dropdown-link" data-bs-toggle="dropdown"><i class="ri-arrow-down-s-line"></i></a>
+          <div class="dropdown-menu">
+            <a href="" class="dropdown-item active"><i class="ri-check-fill"></i> All</a>
+            <a href="" class="dropdown-item"><i class="ri-check-line"></i> None</a>
+            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Read</a>
+            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Unread</a>
+            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Starred</a>
+            <a href="" class="dropdown-item"><i class="ri-check-line"></i> Custom</a>
+          </div><!-- dropdown-menu -->
+        </div><!-- mailbox-select -->
 
         <div class="ms-auto d-flex align-items-center">
           <span>1-10 of 1,060</span>
@@ -73,7 +82,7 @@
         </div>
       </div><!-- mailbox-option -->
       <ul id="mailGroup" class="mail-group">
-        <li class="mail-item active">
+        <li class="mail-item unread">
           <div class="mail-avatar"><img src="../assets/img/img1.jpg" alt=""></div>
           <div class="mail-item-body">
             <div class="d-flex align-items-center justify-content-between">

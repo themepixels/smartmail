@@ -1,9 +1,17 @@
 .sidebar-toggle {
-  .sidebar { left: -$sidebar-width; }
-  .mailbox { left: 0; }
-  .mailcontent { left: 390px; }
-}
+  overflow: hidden;
 
+  .sidebar { left: 0; }
+  .mailbox { left: $sidebar-width; }
+
+  @include media-breakpoint-up(md) {
+    overflow: visible;
+
+    .sidebar { left: -$sidebar-width; }
+    .mailbox { left: 0; }
+    .mailcontent { left: 390px; }
+  }
+}
 
 .sidebar {
   position: fixed;

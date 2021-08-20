@@ -20,6 +20,7 @@ $(function(){
   $('.mailbox-menu').on('click', function(e){
     e.preventDefault();
     $('body').toggleClass('sidebar-toggle');
+    mc.update();
   });
 
   $('.mailbox-search .form-control').on('focusin focusout', function(e){
@@ -27,6 +28,14 @@ $(function(){
       $(this).parent().addClass('onfocus');
     } else {
       $(this).parent().removeClass('onfocus');
+    }
+  });
+
+  $('.mailbox-select').on('mouseenter mouseleave', '.dropdown-check, .dropdown-link', function(e){
+    if(e.type === 'mouseenter') {
+      $(this).parent().addClass('onhover');
+    } else {
+      $(this).parent().removeClass('onhover');
     }
   });
 

@@ -7546,14 +7546,21 @@ textarea.form-control-lg {
     border-color: #aeb1bd;
     color: #212329; }
 
-.sidebar-toggle .sidebar {
-  left: -230px; }
-
-.sidebar-toggle .mailbox {
-  left: 0; }
-
-.sidebar-toggle .mailcontent {
-  left: 390px; }
+.sidebar-toggle {
+  overflow: hidden; }
+  .sidebar-toggle .sidebar {
+    left: 0; }
+  .sidebar-toggle .mailbox {
+    left: 230px; }
+  @media (min-width: 768px) {
+    .sidebar-toggle {
+      overflow: visible; }
+      .sidebar-toggle .sidebar {
+        left: -230px; }
+      .sidebar-toggle .mailbox {
+        left: 0; }
+      .sidebar-toggle .mailcontent {
+        left: 390px; } }
 
 .sidebar {
   position: fixed;
@@ -7750,61 +7757,13 @@ textarea.form-control-lg {
     box-shadow: 0 1px 1px rgba(221, 225, 237, 0.25), 0 2px 2px rgba(221, 225, 237, 0.2), 0 4px 4px rgba(221, 225, 237, 0.15), 0 8px 8px rgba(221, 225, 237, 0.1), 0 16px 16px rgba(221, 225, 237, 0.05); }
 
 .mailbox-option {
-  padding: 0 10px 10px;
+  padding: 5px 10px 10px;
   display: flex;
   align-items: center;
   font-size: 13px; }
   @media (min-width: 768px) {
     .mailbox-option {
       padding: 0 20px 10px; } }
-  .mailbox-option .dropdown-check {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(240, 242, 247, 0.75);
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    color: #6b707d;
-    text-decoration: none; }
-    .mailbox-option .dropdown-check:hover, .mailbox-option .dropdown-check:focus {
-      background-color: #e9ecf3; }
-    .mailbox-option .dropdown-check i {
-      font-size: 20px;
-      line-height: 1;
-      border-radius: 2px; }
-      .mailbox-option .dropdown-check i:not(:first-child) {
-        display: none; }
-    .mailbox-option .dropdown-check.checkall i {
-      color: #3a68f2; }
-      .mailbox-option .dropdown-check.checkall i:first-child {
-        display: none; }
-      .mailbox-option .dropdown-check.checkall i:nth-child(2) {
-        display: block; }
-      .mailbox-option .dropdown-check.checkall i:last-child {
-        display: none; }
-    .mailbox-option .dropdown-check.check i {
-      color: #3a68f2; }
-      .mailbox-option .dropdown-check.check i:first-child, .mailbox-option .dropdown-check.check i:nth-child(2) {
-        display: none; }
-      .mailbox-option .dropdown-check.check i:last-child {
-        display: block; }
-  .mailbox-option .dropdown-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 32px;
-    text-decoration: none;
-    color: #6b707d;
-    font-size: 18px;
-    background-color: rgba(240, 242, 247, 0.75);
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    margin-left: 1px; }
-    .mailbox-option .dropdown-link:hover, .mailbox-option .dropdown-link:focus {
-      background-color: #e9ecf3; }
   .mailbox-option span {
     margin-right: 10px;
     color: #aeb1bd;
@@ -7817,17 +7776,107 @@ textarea.form-control-lg {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(240, 242, 247, 0.75);
-    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccfd9;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     color: #6b707d;
-    text-decoration: none; }
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(233, 234, 240, 0.25), 0 2px 2px rgba(233, 234, 240, 0.2), 0 4px 4px rgba(233, 234, 240, 0.15), 0 8px 8px rgba(233, 234, 240, 0.1), 0 16px 16px rgba(233, 234, 240, 0.05); }
     .mailbox-option .pager:hover, .mailbox-option .pager:focus {
       background-color: #e9ecf3; }
     .mailbox-option .pager i {
-      font-size: 20px;
+      font-size: 22px;
       line-height: 1; }
     .mailbox-option .pager + .pager {
-      margin-left: 1px; }
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+
+.mailbox-select {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(233, 234, 240, 0.25), 0 2px 2px rgba(233, 234, 240, 0.2), 0 4px 4px rgba(233, 234, 240, 0.15), 0 8px 8px rgba(233, 234, 240, 0.1), 0 16px 16px rgba(233, 234, 240, 0.05); }
+  .mailbox-select .dropdown-check {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cccfd9;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    color: #6b707d;
+    text-decoration: none; }
+    .mailbox-select .dropdown-check:hover, .mailbox-select .dropdown-check:focus {
+      background-color: #f0f2f7; }
+    .mailbox-select .dropdown-check i {
+      font-size: 16px;
+      line-height: 1;
+      border-radius: 2px; }
+      .mailbox-select .dropdown-check i:not(:first-child) {
+        display: none; }
+    .mailbox-select .dropdown-check.checkall i {
+      color: #3a68f2; }
+      .mailbox-select .dropdown-check.checkall i:first-child {
+        display: none; }
+      .mailbox-select .dropdown-check.checkall i:nth-child(2) {
+        display: block; }
+      .mailbox-select .dropdown-check.checkall i:last-child {
+        display: none; }
+    .mailbox-select .dropdown-check.check i {
+      color: #3a68f2; }
+      .mailbox-select .dropdown-check.check i:first-child, .mailbox-select .dropdown-check.check i:nth-child(2) {
+        display: none; }
+      .mailbox-select .dropdown-check.check i:last-child {
+        display: block; }
+  .mailbox-select .dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 32px;
+    text-decoration: none;
+    color: #6b707d;
+    font-size: 18px;
+    border: 1px solid #cccfd9;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    margin-left: -1px; }
+    .mailbox-select .dropdown-link:hover, .mailbox-select .dropdown-link:focus {
+      background-color: #f0f2f7; }
+  .mailbox-select .dropdown-menu {
+    margin-top: 2px !important;
+    width: 180px;
+    padding: 5px;
+    border-color: rgba(33, 35, 41, 0.12);
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(204, 207, 217, 0.08), 0 2px 2px rgba(204, 207, 217, 0.12), 0 4px 4px rgba(204, 207, 217, 0.16), 0 8px 8px rgba(204, 207, 217, 0.2); }
+  .mailbox-select .dropdown-item {
+    font-size: 14px;
+    color: #212329;
+    padding: 6px 8px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center; }
+    .mailbox-select .dropdown-item + .dropdown-item {
+      margin-top: 1px; }
+    .mailbox-select .dropdown-item:hover {
+      background-color: #f5f6fa; }
+    .mailbox-select .dropdown-item i {
+      font-size: 16px;
+      line-height: 1.2px;
+      margin-right: 7px;
+      opacity: 0; }
+    .mailbox-select .dropdown-item.active {
+      background-color: #edf1fe;
+      color: #3a68f2; }
+      .mailbox-select .dropdown-item.active i {
+        opacity: 1; }
 
 .mail-group {
   position: relative;
@@ -7858,11 +7907,6 @@ textarea.form-control-lg {
     z-index: 6;
     border-color: rgba(118, 149, 245, 0.6);
     background-color: rgba(245, 246, 250, 0.6); }
-  .mail-item.active {
-    z-index: 5;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-color: #7695f5;
-    box-shadow: 0 1px 1px rgba(204, 207, 217, 0.25), 0 2px 2px rgba(204, 207, 217, 0.2), 0 4px 4px rgba(204, 207, 217, 0.15), 0 8px 8px rgba(204, 207, 217, 0.1), 0 16px 16px rgba(204, 207, 217, 0.05); }
   .mail-item.unread {
     background-color: #fff; }
     .mail-item.unread .mail-sender,
@@ -7872,6 +7916,12 @@ textarea.form-control-lg {
     .mail-item.unread .mail-subject {
       font-weight: 500;
       color: #212329; }
+  @media (min-width: 768px) {
+    .mail-item.active {
+      z-index: 5;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-color: #7695f5;
+      box-shadow: 0 1px 1px rgba(204, 207, 217, 0.25), 0 2px 2px rgba(204, 207, 217, 0.2), 0 4px 4px rgba(204, 207, 217, 0.15), 0 8px 8px rgba(204, 207, 217, 0.1), 0 16px 16px rgba(204, 207, 217, 0.05); } }
 
 .mail-avatar {
   flex-shrink: 0;
