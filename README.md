@@ -1,6 +1,8 @@
 # SmartMail
 Responsive HTML Mailbox application template for FREE!
 
+[SEE DEMO](http://themepixels.me/application/smartmail/)
+
 ## Features
 - Bootstrap 5
 - SASS (scss files included)
@@ -10,5 +12,3 @@ Responsive HTML Mailbox application template for FREE!
 - Gulp
 - Perfect Scrollbar
 - Remixicons
-
-[SEE DEMO](http://themepixels.me/application/smartmail/)
