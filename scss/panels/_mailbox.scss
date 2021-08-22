@@ -3,14 +3,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   background-color: #fff;
   @include transition(all 0.3s);
 
   @include media-breakpoint-up(md) {
     left: $sidebar-width;
-    width: 390px;
+    width: auto;
+    right: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: $mailbox-width;
+    right: auto;
   }
 }
 
@@ -333,10 +339,12 @@
   }
 
   &.active {
-    z-index: 5;
-    background-color: rgba(#fff, .75);
-    border-color: $color-secondary;
-    @include shadow-sharp($gray-400);
+    @include media-breakpoint-up(md) {
+      z-index: 5;
+      background-color: rgba(#fff, .75);
+      border-color: $color-secondary;
+      @include shadow-sharp($gray-400);
+    }
   }
 
   &.selected {

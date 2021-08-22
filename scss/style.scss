@@ -1,6 +1,5 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap');
 
 // Variables & Mixins
 @import "variables";
@@ -11,12 +10,14 @@
 
 // Components
 @import "components/buttons";
+@import "components/tooltip";
 
 // Panels
 @import "panels/sidebar";
 @import "panels/mailbox";
 @import "panels/mailcontent";
 @import "panels/compose";
+@import "panels/backdrop";
 
 // Plugins
 @import "plugins/scrollbar";

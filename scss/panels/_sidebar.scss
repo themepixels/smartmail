@@ -1,15 +1,30 @@
-.sidebar-toggle {
-  overflow: hidden;
 
-  .sidebar { left: 0; }
-  .mailbox { left: $sidebar-width; }
+.sidebar-show {
+  @include media-breakpoint-down(md) {
+    overflow: hidden;
 
+    .sidebar { left: 0; }
+    .mailbox { transform: translateX($sidebar-width); }
+
+    .backdrop {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.sidebar-hide {
   @include media-breakpoint-up(md) {
-    overflow: visible;
-
     .sidebar { left: -$sidebar-width; }
     .mailbox { left: 0; }
-    .mailcontent { left: 390px; }
+    .mailcontent { width: 100vw; }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .mailcontent {
+      left: $mailbox-width;
+      width: auto;
+    }
   }
 }
 
@@ -21,6 +36,7 @@
   height: 100vh;
   background-color: $color-primary;
   @include transition(all 0.3s);
+  z-index: 1000;
 
   @include media-breakpoint-up(md) {
     left: 0;

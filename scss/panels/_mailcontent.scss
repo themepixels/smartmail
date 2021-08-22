@@ -1,45 +1,91 @@
+.mailcontent-show {
+  .mailbox { transform: translateX(-100%); }
+
+  .mailcontent {
+    left: 0;
+    @include media-breakpoint-up(md) { left: $sidebar-width; }
+  }
+
+  &.sidebar-hide .mailcontent {
+    @include media-breakpoint-up(md) { left: 0; }
+  }
+}
 
 .mailcontent {
-  display: none;
   position: fixed;
   top: 0;
-  left: $sidebar-width + 390px;
-  right: 0;
+  left: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: $color-bg-01;
-  overflow: hidden;
   @include transition(all 0.3s);
 
+  @include media-breakpoint-up(md) {
+    width: calc(100vw - #{$sidebar-width});
+  }
+
   @include media-breakpoint-up(xl) {
+    width: auto;
     display: block;
+    left: $sidebar-width + 390px;
+    right: 0;
   }
 }
 
 .mailcontent-item {
   position: relative;
-  padding: 0 25px;
+  padding: 0 15px;
 
-  &:first-child {}
+  @include media-breakpoint-up(md) {
+    padding: 0 25px;
+  }
+
+  &:first-child .mailcontent-header {
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+    }
+  }
 }
 
 .mailcontent-subject {
-  padding: 25px;
-  display: flex;
+  padding: 10px;
+
+  @include media-breakpoint-up(md) { padding: 20px; }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px;
+  }
 
   h4 {
     flex: 1;
     color: $color-tx-01;
-    font-weight: 400;
-    margin-right: 25px;
     text-indent: -1px;
+    margin-top: 8px;
     margin-bottom: 0;
     line-height: 1.4;
+    padding-left: 5px;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      margin-right: 25px;
+      padding-left: 0;
+    }
   }
 
   .nav {
     flex-shrink: 0;
     margin-top: 2.5px;
     margin-left: auto;
+  }
+
+  .nav-link {
+    &:first-child {
+      margin-right: auto;
+
+      @include media-breakpoint-up(xl) { display: none; }
+    }
   }
 
   .nav-link i { font-size: 20px; }
@@ -51,11 +97,25 @@
   align-items: center;
 
   .mail-avatar {
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
+
+    @include media-breakpoint-up(md) {
+      width: 38px;
+      height: 38px;
+    }
   }
 
-  .nav { padding-left: 10px; }
+  .nav {
+    padding-left: 5px;
+    margin-right: -5px;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 10px;
+      margin-right: 0;
+    }
+  }
+
   .nav-link i { font-size: 18px; }
 }
 
@@ -73,7 +133,9 @@
     border-radius: 5px;
     color: $color-tx-02;
 
-    + .nav-link { margin-left: 2px; }
+    + .nav-link {
+      @include media-breakpoint-up(md) { margin-left: 2px; }
+    }
 
     &:hover,
     &:focus {
@@ -86,43 +148,63 @@
 
 .mailcontent-sender {
   flex: 1;
-  padding-left: 10px;
+  padding-left: 8px;
+
+  @include media-breakpoint-up(md) { padding-left: 8px; }
 
   h6 {
     font-size: 14px;
     color: $color-tx-01;
-    margin-bottom: 2px;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) { margin-bottom: 2px; }
 
     span {
       color: $color-tx-03;
       font-weight: 400;
       font-size: 13px;
+      display: none;
+
+      @include media-breakpoint-up(md) { display: inline-block; }
     }
   }
 
   p {
     margin-bottom: 0;
-    font-size: 13px;
+    font-size: 12px;
+
+    @include media-breakpoint-up(md) { font-size: 13px; }
   }
 }
 
 .mailcontent-time {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   color: $color-tx-03;
   padding-left: 10px;
+
+  @include media-breakpoint-up(md) { font-size: 12px; }
+
+  span {
+    display: none;
+    @include media-breakpoint-up(md) { display: inline-block; }
+  }
 }
 
 .mailcontent-body {
   background-color: #fff;
-  padding: 20px 25px 25px;
-  margin: 10px 0;
+  padding: 15px 20px 20px;
   border-radius: 5px;
   @include shadow-sharp($color-bg-03);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
   color: $color-tx-02;
+
+  @include media-breakpoint-up(md) {
+    margin: 10px 0;
+    padding: 20px 25px 25px;
+  }
 
   hr {
     background-color: $color-tx-03;
@@ -143,7 +225,10 @@
 
 .attachment-group {
   position: relative;
-  display: flex;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
 }
 
 .attachment-item {
@@ -152,20 +237,35 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
-  min-width: 240px;
 
-  + .attachment-item { margin-left: 10px; }
+  @include media-breakpoint-up(lg) {
+    min-width: 240px;
+  }
+
+  + .attachment-item {
+    margin-top: 10px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
 }
 
 .attachment-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   border-radius: inherit;
   @include shadow-sharp($color-bg-03);
+
+  @include media-breakpoint-up(lg) {
+    width: 50px;
+    height: 50px;
+  }
 
   i {
     font-size: 28px;
@@ -199,9 +299,13 @@
 }
 
 .mailcontent-footer {
-  padding: 25px;
+  padding: 15px;
   display: flex;
   align-items: center;
+
+  @include media-breakpoint-up(md) {
+    padding: 25px;
+  }
 
   .btn {
     font-size: 14px;
@@ -233,36 +337,6 @@
     margin-bottom: 0;
     margin-left: 0;
     padding-left: 15px;
-  }
-}
-
-.menu-compose {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 1000;
-  width: 56px;
-  height: 56px;
-  border-radius: 100%;
-  background-color: $color-primary;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  @include transition(all 0.2s);
-  @include shadow-sharp($gray-400);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-    color: #fff;
-  }
-
-  i {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1;
   }
 }
 

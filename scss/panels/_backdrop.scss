@@ -1,0 +1,13 @@
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(darken($color-bg-03, 65%), .6);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 900;
+  @include transition(all 0.25s);
+}

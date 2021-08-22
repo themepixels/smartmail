@@ -9,6 +9,8 @@ $(function(){
     suppressScrollX: true
   });
 
+  $('[data-bs-toggle="tooltip"]').tooltip();
+
   $('.sidebar .nav-link').on('click', function(e){
     e.preventDefault();
     $(this).addClass('active');
@@ -19,8 +21,18 @@ $(function(){
 
   $('.mailbox-menu').on('click', function(e){
     e.preventDefault();
-    $('body').toggleClass('sidebar-toggle');
+
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      $('body').toggleClass('sidebar-show');
+    } else {
+      $('body').toggleClass('sidebar-hide');
+    }
+
     mc.update();
+  });
+
+  $('.backdrop').on('click', function(e){
+    $('body').removeClass('sidebar-show');
   });
 
   $('.mailbox-search .form-control').on('focusin focusout', function(e){
@@ -88,7 +100,11 @@ $(function(){
     $(this).removeClass('unread');
 
     $('.mailcontent-placeholder').siblings().removeClass('d-none');
-    $(',mailcontent-placeholder').addClass('d-none');
+    $('.mailcontent-placeholder').addClass('d-none');
+
+    if (window.matchMedia('(max-width: 1199px)').matches) {
+      $('body').addClass('mailcontent-show');
+    }
   });
 
   $('.mail-star').on('click', function(){
@@ -121,6 +137,12 @@ $(function(){
     e.preventDefault();
     $(this).closest('.compose').addClass('d-none').removeClass('minimize fullscreen');
     $('.menu-compose').removeClass('d-none');
+  });
+
+  $('#mailBack').on('click touch', function(e){
+    e.preventDefault();
+
+    $('body').removeClass('mailcontent-show');
   });
 
 })
