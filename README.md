@@ -10,3 +10,5 @@ Responsive HTML Mailbox application template for FREE!
 - Gulp
 - Perfect Scrollbar
 - Remixicons
+
+[SEE DEMO](http://themepixels.me/application/smartmail/)
