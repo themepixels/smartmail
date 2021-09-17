@@ -1,5 +1,5 @@
 # SmartMail
-Responsive HTML Mailbox application template for FREE!
+Premium Design and Responsive HTML Mailbox application template for FREE!
 
 [SEE DEMO](http://themepixels.me/application/smartmail/)
 
